@@ -1,0 +1,154 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.item{
+    display:flex;
+    list-style: none;
+    justify-content:flex-end ;
+    flex-wrap: wrap row;
+   
+    
+}
+.nav-bar{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30%;
+    text-align: center;
+}
+a:hover{
+    background-color: white;
+    color: black;
+}
+.logo{
+    display:inline-block;
+    width: 50%;
+    padding: 10px 30px;
+    
+}
+.logo h1{
+    font-size: 40px;
+}
+header{
+    background-color:black;
+    color: white;
+}
+.content{
+    height: 600px;
+    width: 100%;
+    background-image:url(assets/1200px-Delphi_BW_2017-10-08_11-38-38.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.frontheading{
+    text-align: center;
+    background-color:rgba(0,0, 0, 0.5);
+    position: relative;
+    top: 150px;
+}
+.Main-heading{
+    font-size:40px;
+    padding: 20px 0px;
+    
+}
+.sub-heading{
+    font-size: 25px;
+    padding: 10px 20px;
+}
+ 
+.button{
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: orange;
+    border: 5px solid orange;
+    transition: 0.4s;
+    display: inline-block;
+}
+.button:hover{
+    background-color:#ffaa33;
+    font-weight: bold;   
+    border: 5px solid  rgb(239, 157, 5);
+    color: white;
+}
+.features{
+    display:flex;
+    text-align: center;
+   margin-bottom: 20px;
+    
+}
+.feature img{
+    height: 100px;
+    margin: 20px ;
+}
+.feature h3{
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.feature p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.feature{
+    margin: 0 30px;
+}
+.cta{
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    font-size: 30px;
+
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+@media(max-width:700px){
+    .item li{
+        display: none;
+    }
+    .logo {
+        width:100%;
+        text-align: center;
+    }
+    .features{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+}
+@media (max-width:415px){
+    .Main-heading{
+        font-size: 35px;
+    }
+    body p{
+        font-size:16px !important;
+    }
+    .sub-heading {
+        font-size:20px !important;
+    }
+    .cta h2{
+        font-size:35px ;
+    }
+}
