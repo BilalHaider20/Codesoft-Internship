@@ -2,7 +2,7 @@ let currentInput = '';
 let result = 0;
 
 function Display(value) {
-    currentInput += value;
+    currentInput =currentInput+ value;
     document.getElementById('display').value = currentInput;
 }
 
@@ -14,6 +14,9 @@ function clearDisplay() {
 
 function calculateResult() {
     try {
+        currentInput = currentInput.replace(/\^/g, '**');
+        currentInput = currentInput.replace(/%/g, '/100');
+        
         result = eval(currentInput);
         document.getElementById('display').value = result;
         currentInput = result.toString();
@@ -22,11 +25,21 @@ function calculateResult() {
         currentInput = '';
     }
 }
-
+function exponentation() {
+    currentInput = currentInput + '^';
+    document.getElementById('display').value = currentInput;
+}
+function percentage(value) {
+    currentInput = currentInput + value;
+    document.getElementById('display').value = currentInput;
+    calculateResult();
+}
 function removeLastDigit() {
     currentInput = currentInput.slice(0, -1);
     document.getElementById('display').value = currentInput;
 }
+
+
 
 
 
